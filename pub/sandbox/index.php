@@ -37,12 +37,12 @@
 
        // $sourceFileExtension = strtolower($sourceFileExtension);
 
-        $newFileName = hash("sha256", $sourceFileName) . hrtime(true)
+        $newFileName = hash("sha256", $sourceFileName . hrtime(true) )
                         . ".webp";
 
             $imageString = file_get_contents($tempURL);
 
-            
+
 
             $gdImage = imagecreatefromstring($imageString);
 
