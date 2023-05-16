@@ -10,8 +10,19 @@ Route::add('/', function(){
 
 Route::add('/upload', function(){
     global $twig;
+     if(isset($_POST['submit'])) {
+        Post::upload($_FILES['uploadedFile']['tmp_name']);
+    }
     $twig->display("upload.html.twig");
 });
+
+Route::add('/upload', function() {
+    global $twig;
+    if(isset($_POST['submit'])) {
+        Post::upload($_FILES['uploadedFile']['tmp_name']);
+    }
+    $twig->display("index.html.twig");
+}, 'post');
 
 
 Route::run('/cms/pub');
