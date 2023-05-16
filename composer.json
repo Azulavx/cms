@@ -1,0 +1,17 @@
+{
+    "name": "azulavx/cms",
+    "description": "Prosty system CMS do strony z memami",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Azulavx\\Cms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Azulavx",
+            "email": "martynamoczulska2004@gmail.com"
+        }
+    ],
+    "require": {}
+}
